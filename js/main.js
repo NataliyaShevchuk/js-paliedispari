@@ -36,18 +36,6 @@ if ( userPariDispari !== "pari" && userPariDispari !== "dispari" ) {
     alert("ma noooo, un numero tra 1 e 5 ");
 }
 
-function userNumPariDispari(userNum){
-    if (userNum % 2 === 0){
-        return true;
-    }else{
-        return false;
-    }
-}
-const risultatoUser = userNumPariDispari(userNum);
-console.log("risultato", risultatoUser);
-const userFullNumber = Number(risultatoUser);
-
-
 
 // STEP 2: Generare un numero da 1 a 5 per il pc
 // - uso una funzione ed un calcolo per generare un numero tra 1 e 5
@@ -65,7 +53,7 @@ console.log("numero random per pc", risultatoRandom);
 // STEP 3: Sommare entrambi i numeri
 // - sommo il risultato del pc con quello dell'utente 
 
-const sommaUserPc = userFullNumber + risultatoRandom;
+const sommaUserPc = parseInt(userNum) + risultatoRandom;
 console.log("somma dei due insiemi", sommaUserPc);
 
 
@@ -75,28 +63,16 @@ console.log("somma dei due insiemi", sommaUserPc);
 
 
 
-if ( sommaUserPc === userFullNumber ){
-    if (sommaUserPc % 2 === 0){
-        alert("Ottimo! sei il vincitore!");
-        console.log("bravo hai vinto!");
-    }else {
-        alert("non sei tu il vincitore, ma la fortuna gira!");
-        console.log("sorry");
-    }
-}else if(sommaUserPc === risultatoRandom) {
-    if (sommaUserPc % 2 === 1){
-        alert("Ottimo! sei il vincitore!");
-        console.log("bravo hai vinto!");
-    }else{
-        alert("sorry not sorry");
-        console.log("sorry");
-        
-    }
-} else{
-
+if (sommaUserPc % 2 === 0 && userPariDispari == 'pari'){
+    alert("Ottimo! sei il vincitore!");
+    console.log("bravo hai vinto!");
+}else if (sommaUserPc % 2 !== 0 && userPariDispari == 'dispari'){
+    alert("Ottimo! sei il vincitore!");
+    console.log("sorry");
+} else {
+    alert('hai perso!');
 }
 
 
-if ( sommaUserPc === userFullNumber && sommaUserPc !== risultatoRandom){
-    
-}
+
+

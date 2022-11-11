@@ -7,7 +7,8 @@ const userName = prompt("ciao dimmi una parola che vuoi!");
 
 function getNamePalindromo(wordReverse){
     // wordReverse.split("").reverse("").join("")
-    return wordRev = wordReverse.split("").reverse("").join(""); //modo che spezzetta la parola in lettere individuali, la reversa e la unisce per farla leggere al browser
+    return wordRev = wordReverse.split("").reverse("").join(""); //modo che spezzetta la parola in lettere individuali,
+                                                                //la reversa e la unisce per farla leggere al browser
 }
 
 const palindromo = getNamePalindromo(userName);
